@@ -1,0 +1,6 @@
+wintersweet 梅花
+apple 苹果
+orange 橘子
+banana 香蕉
+flower 花
+fish 鱼
