@@ -41,7 +41,7 @@ function Graph(vNum){
     for(var i=0;i<this.vertexes;i++){
       s='';
       for(var j=0;j<this.adj[i].length;j++){
-        if (this.adj[i][j]!=undefined) {
+        if (this.adj[i][j]!=undefined&&this.vertexList[this.adj[i][j]]!=undefined) {
           s+=this.vertexList[this.adj[i][j]]+' ';
         }
 
