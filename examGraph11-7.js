@@ -105,8 +105,8 @@ function Graph(vNum){
         this.topSortHelper(i,visited,stack);
       }
     }
-    for(var i=0;i<stack.length;i++){
-      if (stack[i]!=undefined&&stack[i]!=false) {
+    for(var i=stack.length-1;i>=0;i--){
+      if (stack[i]!=undefined) {
         console.log(this.vertexList[stack[i]]);
       }
     }
@@ -114,8 +114,8 @@ function Graph(vNum){
   function topSortHelper(v,visited,stack){
     visited[v]=true;
     for(var i in this.adj[v]){
-      if (!visited[this.adj[v][i]]) {
-        this.topSortHelper(visited[this.adj[v][i]],visited,stack);
+      if (!visited[this.adj[v][i]]&&this.adj[v][i]) {
+        this.topSortHelper(this.adj[v][i],visited,stack);
       }
     }
     stack.push(v);
